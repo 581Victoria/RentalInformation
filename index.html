@@ -6,6 +6,52 @@
     <title>Home · 581 Victoria Street, Kingston Ontario</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+  
+  <style>
+  /* Forces the slider box to show up on iPhone */
+  .hero-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: block !important;
+  }
+
+  /* Makes the images fill the box perfectly */
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Hides images that aren't active so they don't stack */
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Only shows the slide with this class */
+  .slide.is-active {
+    display: block;
+  }
+
+  /* Positioning for the buttons so you can see them */
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+</style>
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
