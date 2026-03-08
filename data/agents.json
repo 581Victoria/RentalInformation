@@ -1,12 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Agent 1 McKenzie",
-    "title": "Listing Specialist",
-    "email": "agent1@example.com",
-    "phone": "+1 (604) 555-101",
-    "photo": "https://picsum.photos/seed/agent1/640/640",
-    "bio": "Experienced local expert with a passion for great client experiences and data-driven pricing."
+    "name": "Floor Plan",
+    "title": "Floor Plan",
+    "photo": "images2\1stFloor",
   },
   {
     "id": 2,
