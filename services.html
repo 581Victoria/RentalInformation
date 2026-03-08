@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Documents · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
+    
     <style>
-      /* Same Centering Reset as Gallery */
-      body, html { margin: 0; padding: 0; overflow-x: hidden; }
-
+      /* This makes the PDF links look like the nice buttons we designed */
       .doc-container {
         display: flex;
         flex-direction: column;
@@ -38,35 +38,18 @@
       .doc-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
       .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
       .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
-
-      /* THIS PART MAKES THE HAMBURGER WORK */
-      @media (max-width: 768px) {
-        #navLinks {
-          display: none; /* Hidden until clicked */
-          flex-direction: column;
-          position: absolute;
-          top: 70px;
-          left: 0;
-          width: 100%;
-          background: #fff;
-          z-index: 9999;
-          border-bottom: 1px solid #ddd;
-        }
-        /* When button is clicked, this class is added by JS */
-        #navLinks.is-active {
-          display: flex !important;
-        }
-        #navLinks a { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
-      }
     </style>
   </head>
   <body>
-  <header class="site-header">
+    <a href="#content" class="skip-link">Skip to content</a>
+    <header class="site-header">
       <div class="container navbar">
-        <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
+        <a class="logo" href="index.html" aria-label="581 Victoria Street - Home"
+          >581<span> Victoria Street</span></a
+        >
         <nav class="nav-links" id="navLinks" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="agents.html" >Floor Plan and Rooms</a>
+          <a href="agents.html">Floor Plan and Rooms</a>
           <a href="services.html" class="active">Documents</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
@@ -80,25 +63,29 @@
       </div>
     </header>
 
-    <main class="container">
+    <main id="content" class="container">
       <section class="hero-text">
         <h1>Tenant Documents</h1>
         <p>Tap a file below to view or download.</p>
       </section>
 
       <div class="doc-container">
+        <!-- PDF 1 -->
         <a href="Documents/lease20262027.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📄</div>
           <div class="doc-info"><h3>Lease Agreement</h3><p>Residential Tenancy Agreement</p></div>
         </a>
+        <!-- PDF 2 -->
         <a href="Documents/quickrules.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📝</div>
           <div class="doc-info"><h3>House Expectations</h3><p>Rules & Guidelines</p></div>
         </a>
+        <!-- PDF 3 -->
         <a href="Documents/attachmenta.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📎</div>
           <div class="doc-info"><h3>Attachment A</h3><p>Additional Lease Terms</p></div>
         </a>
+        <!-- PDF 4 -->
         <a href="Documents/collectioncalendar.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📅</div>
           <div class="doc-info"><h3>Collection Calendar</h3><p>Garbage & Recycling Schedule</p></div>
@@ -106,28 +93,11 @@
       </div>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #888;">
-      © 2026 581 Victoria Street
-    </footer>
-    <!-- JavaScript for the Hamburger Menu -->
-   <!-- 1. The jQuery Library (Required for the menu) -->
-<script src="https://code.jquery.com"></script>https://code.jquery.com"></script>
+    <!-- jQuery FIRST (The way it was on the working page) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 
-<!-- 2. Your main script (This likely handles the menu) -->
-<script src="assets/js/main.js"></script>
-
-<!-- 3. The "Manual Overwrite" (Guarantees it works on iPhone) -->
-<script>
-  $(document).ready(function() {
-    $('#hamburger').on('click', function() {
-      // Toggle the 'is-active' class on the menu
-      $('#navLinks').toggleClass('is-active');
-     
-      // Update the button state for iPhones
-      const expanded = $(this).attr('aria-expanded') === 'true';
-      $(this).attr('aria-expanded', !expanded);
-    });
-  });
-</script>
   </body>
 </html>
