@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/about.css" />
     
     <style>
-      /* This makes the PDF links look like the nice buttons we designed */
+      /* Styles for the PDF/Link buttons */
       .doc-container {
         display: flex;
         flex-direction: column;
@@ -38,6 +38,19 @@
       .doc-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
       .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
       .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
+
+      /* Subheader Styling */
+      .section-title {
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+        margin: 30px 0 10px 0;
+        font-family: sans-serif;
+        color: #666;
+        font-size: 1.2rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+      }
     </style>
   </head>
   <body>
@@ -68,64 +81,57 @@
         <p>Tap a file below to view or download.</p>
       </section>
 
-       <div class="doc-container">
-             <!-- 4. Garbage Collection Calendar (PDF) -->
+      <div class="doc-container">
+        
+        <!-- SECTION 1: QUICK LINKS -->
+        <h2 class="section-title">Quick Links</h2>
+
         <a href="Documents/collectioncalendar.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📅</div>
           <div class="doc-info"><h3>Collection Calendar</h3><p>Garbage & Recycling PDF</p></div>
         </a>
 
-        <!-- NEW: Kingston Online Waste Tool -->
-        <a href="https://www.cityofkingston.ca/garbage-and-recycling/collection-calendar/" class="doc-item" target="_blank">
+        <a href="https://www.cityofkingston.ca" class="doc-item" target="_blank">
           <div class="doc-icon">♻️</div>
-          <div class="doc-info">
-            <h3>Kingston Waste Tool</h3>
-            <p>Find your specific pickup day online</p>
-          </div>
+          <div class="doc-info"><h3>Kingston Waste Tool</h3><p>Find your specific pickup day online</p></div>
         </a>
 
-  <!-- NEW: Kingston Transit -->
-        <a href="https://www.kingstontransit.ca/" class="doc-item" target="_blank">
+        <a href="https://www.kingstontransit.ca" class="doc-item" target="_blank">
           <div class="doc-icon">🚌</div>
-          <div class="doc-info">
-            <h3>Kingston Transit</h3>
-            <p>Bus Schedules</p>
-          </div>
+          <div class="doc-info"><h3>Kingston Transit</h3><p>Bus Schedules</p></div>
         </a>
-         
-         
-         <!-- 1. Lease Agreement -->
+
+        <!-- SECTION 2: LEASES & AGREEMENTS -->
+        <h2 class="section-title">Lease & Agreements</h2>
+
         <a href="Documents/lease20262027.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📄</div>
           <div class="doc-info"><h3>Lease Agreement</h3><p>Residential Tenancy Agreement</p></div>
         </a>
 
-        <!-- 2. House Expectations -->
         <a href="Documents/quickrules.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📝</div>
           <div class="doc-info"><h3>House Expectations</h3><p>Rules & Guidelines</p></div>
         </a>
 
-        <!-- 3. Attachment A -->
         <a href="Documents/attachmenta.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📎</div>
           <div class="doc-info"><h3>Attachment A</h3><p>Additional Lease Terms</p></div>
         </a>
 
-         
-        <!-- NEW: LTB Forms & Filing -->
-        <a href="https://tribunalsontario.ca/ltb/forms-filing-and-fees/#panel1" class="doc-item" target="_blank">
+        <!-- SECTION 3: HELPFUL FORMS -->
+        <h2 class="section-title">Helpful Forms</h2>
+
+        <a href="https://tribunalsontario.ca" class="doc-item" target="_blank">
           <div class="doc-icon">⚖️</div>
-          <div class="doc-info">
-            <h3>LTB Forms & Filing</h3>
-            <p>Official Ontario Tenant Forms</p>
-          </div>
+          <div class="doc-info"><h3>LTB Forms & Filing</h3><p>Official Ontario Tenant Forms</p></div>
         </a>
+
       </div>
     </main>
 
-    <!-- jQuery FIRST (The way it was on the working page) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    <!-- jQuery and Scripts exactly like your working page -->
+    <script src="https://code.jquery.com"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
