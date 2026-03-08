@@ -64,13 +64,34 @@
     <header class="site-header">
       <div class="container navbar">
         <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks" aria-label="Primary">
           <a href="index.html" class="active">Home</a>
           <a href="agents.html" class="">Floor Plan and Rooms</a>
           <a href="services.html" class="">Documents</a>
           <a href="about.html" class="">About</a>
           <a href="contact.html" class="">Contact</a>
         </nav>
+        <div class="controls">
+          <button
+            id="themeToggle"
+            class="btn ghost"
+            onclick="toggleTheme()"
+            aria-pressed="false"
+            aria-label="Toggle dark mode"
+          >
+            🌓
+          </button>
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Menu"
+            aria-controls="navLinks"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
       </div>
     </header>
 
