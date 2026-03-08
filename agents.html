@@ -127,16 +127,24 @@
     </footer>
 
     <!-- JavaScript for the Hamburger Menu -->
-    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#hamburger').on('click', function() {
-          const expanded = $(this).attr('aria-expanded') === 'true';
-          $(this).attr('aria-expanded', !expanded);
-          $('#navLinks').toggleClass('is-active');
-        });
-      });
-    </script>
+   <!-- 1. The jQuery Library (Required for the menu) -->
+<script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+
+<!-- 2. Your main script (This likely handles the menu) -->
+<script src="assets/js/main.js"></script>
+
+<!-- 3. The "Manual Overwrite" (Guarantees it works on iPhone) -->
+<script>
+  $(document).ready(function() {
+    $('#hamburger').on('click', function() {
+      // Toggle the 'is-active' class on the menu
+      $('#navLinks').toggleClass('is-active');
+     
+      // Update the button state for iPhones
+      const expanded = $(this).attr('aria-expanded') === 'true';
+      $(this).attr('aria-expanded', !expanded);
+    });
+  });
+</script>
   </body>
 </html>
