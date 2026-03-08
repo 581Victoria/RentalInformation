@@ -6,12 +6,59 @@
     <title>Gallery · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <style>
-      .gallery-container { display: flex; flex-direction: column; gap: 30px; padding: 20px; }
-      .gallery-item { width: 100%; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 10px; }
-      .gallery-item img { width: 100%; height: auto; display: block; object-fit: cover; }
-      .gallery-item figcaption { padding: 15px; font-weight: bold; background: #f9f9f9; text-align: center; color: #333; border-top: 1px solid #eee; }
-      .hero-text { text-align: center; padding: 30px 20px; }
-    </style>
+  /* Resetting default browser margins that cause "right-leaning" images */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents side-scrolling on iPhone */
+  }
+
+  /* Centering the main container */
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This is the "magic" line for centering */
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Centering each image card */
+  .gallery-item {
+    width: 100%;
+    max-width: 600px; /* Adjust this if you want images wider/narrower */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto; /* Forces equal space on left and right */
+  }
+
+  /* Making sure the image stays inside the centered box */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .gallery-item figcaption {
+    padding: 15px;
+    font-weight: bold;
+    background: #f9f9f9;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #eee;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>
   </head>
   <body>
     <header class="site-header">
