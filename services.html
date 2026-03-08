@@ -6,59 +6,42 @@
     <title>Documents · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <style>
-      /* Centering and Reset for iPhone */
       body, html { margin: 0; padding: 0; overflow-x: hidden; }
 
+      /* Force Header to the front */
+      .site-header { position: relative; z-index: 10000; }
+
       .doc-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
+        display: flex; flex-direction: column; align-items: center; 
+        gap: 20px; padding: 20px; width: 100%; box-sizing: border-box;
       }
 
-      /* Document Button Style */
       .doc-item {
-        width: 100%;
-        max-width: 600px;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        border: 1px solid #eee;
-        box-sizing: border-box;
+        width: 100%; max-width: 600px; background: #fff; border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-decoration: none;
+        color: inherit; display: flex; align-items: center; padding: 20px;
+        border: 1px solid #eee; box-sizing: border-box;
       }
 
       .doc-icon { font-size: 2rem; margin-right: 20px; }
       .doc-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
       .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
-
       .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
 
-      /* Mobile Menu "Safety" CSS */
+      /* MOBILE MENU REPAIR */
       @media (max-width: 768px) {
         .nav-links {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          position: absolute;
-          top: 70px;
-          left: 0;
-          background: #fff;
-          z-index: 1000;
-          padding: 20px 0;
-          border-bottom: 1px solid #ddd;
+          display: none; flex-direction: column; width: 100%;
+          position: absolute; top: 100%; left: 0; background: #fff;
+          z-index: 9999 !important; padding: 20px 0; border-bottom: 2px solid #ddd;
         }
+
+        /* This forces the menu to appear when the button is clicked */
         .nav-links.is-active {
           display: flex !important;
         }
-        .nav-links a { padding: 15px; text-align: center; width: 100%; text-decoration: none; color: inherit; }
+
+        .nav-links a { padding: 15px; text-align: center; width: 100%; text-decoration: none; color: #333; border-bottom: 1px solid #eee; }
       }
     </style>
   </head>
@@ -66,7 +49,7 @@
    <header class="site-header">
       <div class="container navbar">
         <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
-        <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="agents.html">Floor Plan and Rooms</a>
           <a href="services.html" class="active">Documents</a>
@@ -75,7 +58,7 @@
         </nav>
         <div class="controls">
           <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
-          <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
+          <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" style="position: relative; z-index: 10001;">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -89,40 +72,21 @@
       </section>
 
       <div class="doc-container">
-        <!-- PDF 1 -->
         <a href="Documents/lease20262027.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📄</div>
-          <div class="doc-info">
-            <h3>Lease Agreement</h3>
-            <p>Residential Tenancy Agreement</p>
-          </div>
+          <div class="doc-info"><h3>Lease Agreement</h3><p>Residential Tenancy Agreement</p></div>
         </a>
-
-        <!-- PDF 2 -->
         <a href="Documents/quickrules.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📝</div>
-          <div class="doc-info">
-            <h3>House Expectations</h3>
-            <p>Rules & Guidelines</p>
-          </div>
+          <div class="doc-info"><h3>House Expectations</h3><p>Rules & Guidelines</p></div>
         </a>
-
-        <!-- PDF 3 -->
         <a href="Documents/attachmenta.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📎</div>
-          <div class="doc-info">
-            <h3>Attachment A</h3>
-            <p>Additional Lease Terms</p>
-          </div>
+          <div class="doc-info"><h3>Attachment A</h3><p>Additional Lease Terms</p></div>
         </a>
-
-        <!-- PDF 4 -->
         <a href="Documents/collectioncalendar.pdf" class="doc-item" target="_blank">
           <div class="doc-icon">📅</div>
-          <div class="doc-info">
-            <h3>Collection Calendar</h3>
-            <p>Garbage & Recycling Schedule</p>
-          </div>
+          <div class="doc-info"><h3>Collection Calendar</h3><p>Garbage & Recycling Schedule</p></div>
         </a>
       </div>
     </main>
@@ -131,21 +95,13 @@
       © 2026 581 Victoria Street
     </footer>
 
-    <!-- 1. The jQuery Library (Required for the menu) -->
     <script src="https://code.jquery.com"></script>
-    
-    <!-- 2. Your main script (Handles the Theme Toggle) -->
     <script src="assets/js/main.js"></script>
-
-    <!-- 3. The Hamburger Menu Fix -->
     <script>
       $(document).ready(function() {
         $('#hamburger').on('click', function(e) {
           e.preventDefault();
-          // Toggle the 'is-active' class on the menu
           $('#navLinks').toggleClass('is-active');
-          
-          // Update the button state for iPhones
           const expanded = $(this).attr('aria-expanded') === 'true';
           $(this).attr('aria-expanded', !expanded);
         });
