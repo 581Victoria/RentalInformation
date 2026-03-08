@@ -58,7 +58,7 @@
         .nav-links.is-active {
           display: flex !important;
         }
-        .nav-links a { padding: 15px; text-align: center; width: 100%; }
+        .nav-links a { padding: 15px; text-align: center; width: 100%; text-decoration: none; color: inherit; }
       }
     </style>
   </head>
@@ -68,8 +68,8 @@
         <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
         <nav class="nav-links" id="navLinks" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="agents.html" class="active">Floor Plan and Rooms</a>
-          <a href="services.html">Documents</a>
+          <a href="agents.html">Floor Plan and Rooms</a>
+          <a href="services.html" class="active">Documents</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
@@ -131,14 +131,21 @@
       © 2026 581 Victoria Street
     </footer>
 
-    <!-- JavaScript Engine for Hamburger Menu -->
-    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+    <!-- 1. The jQuery Library (Required for the menu) -->
+    <script src="https://code.jquery.com"></script>
+    
+    <!-- 2. Your main script (Handles the Theme Toggle) -->
     <script src="assets/js/main.js"></script>
+
+    <!-- 3. The Hamburger Menu Fix -->
     <script>
       $(document).ready(function() {
         $('#hamburger').on('click', function(e) {
           e.preventDefault();
+          // Toggle the 'is-active' class on the menu
           $('#navLinks').toggleClass('is-active');
+          
+          // Update the button state for iPhones
           const expanded = $(this).attr('aria-expanded') === 'true';
           $(this).attr('aria-expanded', !expanded);
         });
