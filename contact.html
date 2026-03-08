@@ -5,26 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
+    
+    <style>
+      /* Keeping the same nice button style from your Documents page */
+      .doc-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .doc-item {
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+      }
+
+      .doc-icon { font-size: 2rem; margin-right: 20px; }
+      .doc-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
+      .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
+      .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
+
+      .section-title {
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+        margin: 30px 0 10px 0;
+        font-family: sans-serif;
+        color: #666;
+        font-size: 1.2rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+      }
+    </style>
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-       <a class="logo" href="index.html" aria-label="581 Victoria Street - Home">581 <span>Victoria Street</span></a>
-         <nav class="nav-links" id="navLinks" aria-label="Primary">
-          <a href="index.html" class="active">Home</a>
-          <!--<a href="listings.html" class="">Listings</a>-->
-          <a href="agents.html" class="">Pictures</a>
-          <!--<a href="neighborhoods.html" class="">Neighborhoods</a>-->
-          <a href="services.html" class="">Documents</a>
-          <!--<a href="blog.html" class="">Blog</a>-->
-          <a href="about.html" class="">About</a>
-          <a href="contact.html" class="">Contact</a>
+        <a class="logo" href="index.html" aria-label="581 Victoria Street - Home"
+          >581<span> Victoria Street</span></a
+        >
+        <nav class="nav-links" id="navLinks" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="agents.html">Floor Plan and Rooms</a>
+          <a href="services.html">Documents</a>
+          <a href="contact.html" class="active">Contact</a>
         </nav>
         <div class="controls">
           <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
-          <button id="hamburger" class="hamburger" aria-label="Menu">
+          <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -32,42 +75,43 @@
     </header>
 
     <main id="content" class="container">
-      <section class="hero">
-        <h1>Need to Reach out to us?</h1>
-        <p>Send us a quick email using the form below.</p>
+      <section class="hero-text">
+        <h1>Contact & Maintenance</h1>
+        <p>Use the form below for maintenance requests or general inquiries.</p>
       </section>
 
-      <section class="section">
-        <!-- FORM ENGINE: Connected to ouldssalena@gmail.com -->
-       <form class="card card-content" action="https://formsubmit.co" method="POST">
-  <div class="form-row">
-    <div>
-      <label for="name">Name</label>
-      <input class="input" id="name" name="name" type="text" required />
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input class="input" id="email" name="email" type="email" required />
-    </div>
-  </div>
-  <div>
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" class="input" required></textarea>
-  </div>
-  <p><button type="submit" class="btn">Send Message</button></p>
-</form>
+      <div class="doc-container">
+        
+        <h2 class="section-title">Online Forms</h2>
 
-      </section>
+        <!-- YOUR GOOGLE FORM LINK GOES IN THE href BELOW -->
+        <a href="PASTE_YOUR_GOOGLE_FORM_URL_HERE" class="doc-item" target="_blank">
+          <div class="doc-icon">📋</div>
+          <div class="doc-info">
+            <h3>Maintenance & Inquiry Form</h3>
+            <p>Tap to open Google Forms</p>
+          </div>
+        </a>
+
+        <h2 class="section-title">Direct Contact</h2>
+
+        <!-- Quick Email Link -->
+        <a href="mailto:ouldssalena@gmail.com" class="doc-item">
+          <div class="doc-icon">✉️</div>
+          <div class="doc-info">
+            <h3>Email Us</h3>
+            <p>ouldssalena@gmail.com</p>
+          </div>
+        </a>
+
+      </div>
     </main>
 
-    <footer>
-      <div class="container footer-inner">
-        <div>© 2026 581 Victoria Street</div>
-      </div>
-    </footer>
-
-    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+    <!-- jQuery and Scripts kept exactly the same for a working menu -->
+    <script src="https://code.jquery.com"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
+
   </body>
 </html>
-
