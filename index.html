@@ -181,5 +181,38 @@
     <script src="assets/js/main.js"></script>
     <!-- Page script: slider + homepage data -->
     <script src="assets/js/index.js"></script>
+  
+  <script>
+  // This makes your 'next' and 'prev' buttons work
+  $(document).ready(function() {
+    const $slides = $('.slide');
+    let currentIndex = 0;
+
+    function updateSlider(index) {
+      $slides.removeClass('is-active').hide(); // Hide all
+      $($slides[index]).addClass('is-active').show(); // Show current
+    }
+
+    $('.next').on('click', function() {
+      currentIndex = (currentIndex + 1) % $slides.length;
+      updateSlider(currentIndex);
+    });
+
+    $('.prev').on('click', function() {
+      currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
+      updateSlider(currentIndex);
+    });
+    
+    // This makes it swipe-friendly for iPhone Safari
+    let touchStartX = 0;
+    $('.hero-slider').on('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+    $('.hero-slider').on('touchend', e => {
+      let touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) $('.next').click();
+      if (touchEndX - touchStartX > 50) $('.prev').click();
+    });
+  });
+</script>
+  
   </body>
 </html>
