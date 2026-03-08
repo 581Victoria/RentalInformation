@@ -3,89 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pictures · 581 Victoria</title>
+    <title>Gallery · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/agents.css" />
+    <style>
+      .gallery-container { display: flex; flex-direction: column; gap: 30px; padding: 20px; }
+      .gallery-item { width: 100%; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 10px; }
+      .gallery-item img { width: 100%; height: auto; display: block; object-fit: cover; }
+      .gallery-item figcaption { padding: 15px; font-weight: bold; background: #f9f9f9; text-align: center; color: #333; border-top: 1px solid #eee; }
+      .hero-text { text-align: center; padding: 30px 20px; }
+    </style>
   </head>
   <body>
-    <a href="#content" class="skip-link">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-        <a class="logo" href="index.html" aria-label="581 Victoria Street"
-          >581<span> Victoria Street</span></a
-        >
-        <nav class="nav-links" id="navLinks" aria-label="Primary">
-          <a href="index.html" class="active">Home</a>
-          <a href="agents.html" class="">Floor Plan and Rooms</a>
-          <a href="services.html" class="">Documents</a>
-          <a href="about.html" class="">About</a>
-          <a href="contact.html" class="">Contact</a>
+        <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="agents.html" class="active">Gallery</a>
+          <a href="contact.html">Contact</a>
         </nav>
-        <div class="controls">
-          <button
-            id="themeToggle"
-            class="btn ghost"
-            onclick="toggleTheme()"
-            aria-pressed="false"
-            aria-label="Toggle dark mode"
-          >
-            🌓
-          </button>
-          <button
-            id="hamburger"
-            class="hamburger"
-            aria-label="Menu"
-            aria-controls="navLinks"
-            aria-expanded="false"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
       </div>
     </header>
-    <main id="content" class="container">
-      <section class="hero">
-        <p class="badge">Floor Plan and Rooms</p>
-        <h1>Floor Plan and Rooms</h1>
+
+    <main class="container">
+      <section class="hero-text">
+        <h1>Property Gallery</h1>
+        <p>Scroll down to view all areas of the home.</p>
       </section>
 
-      <section class="section">
-        <div id="agentGrid" class="grid cols-3"></div>
-      </section>
+      <div class="gallery-container">
+        <!-- Exterior & Location -->
+        <figure class="gallery-item"><img src="images2/HouseFront.jpg"><figcaption>House Front</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Location.jpg"><figcaption>Location</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/PropertyLines.jpg"><figcaption>Property Lines</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Parking.jpg"><figcaption>Parking</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/OutdoorSpace.jpg"><figcaption>Outdoor Space</figcaption></figure>
+
+        <!-- Common Areas -->
+        <figure class="gallery-item"><img src="images2/CommonSpace.jpg"><figcaption>Common Space</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/CommonSpace2.jpg"><figcaption>Common Space (Alt View)</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/SharedSpaceLaundry.jpg"><figcaption>Laundry Area</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Kitchen.jpg"><figcaption>Kitchen</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Kitchen2.jpg"><figcaption>Kitchen (Alt View)</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Kitchen3.jpg"><figcaption>Kitchen (Detail)</figcaption></figure>
+
+        <!-- Bathrooms -->
+        <figure class="gallery-item"><img src="images2/BathroomA.jpg"><figcaption>Bathroom A</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/BathroomB.jpg"><figcaption>Bathroom B</figcaption></figure>
+
+        <!-- Bedrooms -->
+        <figure class="gallery-item"><img src="images2/Bedroom1a.jpg"><figcaption>Bedroom 1a</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/bedroom1b.jpg"><figcaption>Bedroom 1b</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom2a.jpg"><figcaption>Bedroom 2a</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom2b.jpg"><figcaption>Bedroom 2b</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom3a.jpg"><figcaption>Bedroom 3a</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom3b.jpg"><figcaption>Bedroom 3b</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom4a.jpg"><figcaption>Bedroom 4a</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/Bedroom4b.jpg"><figcaption>Bedroom 4b</figcaption></figure>
+
+        <!-- Floor Plans -->
+        <figure class="gallery-item"><img src="images2/1stFloor.jpg"><figcaption>1st Floor Plan</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/1stFloorMod.jpg"><figcaption>1st Floor (Modified)</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/2ndFloor.jpg"><figcaption>2nd Floor Plan</figcaption></figure>
+        <figure class="gallery-item"><img src="images2/3rdFloor.jpg"><figcaption>3rd Floor Plan</figcaption></figure>
+      </div>
     </main>
-    <footer>
-      <div class="container footer-inner">
-        <div>
-          © 2026 581 Victoria Street
-        </div>
-      </div>
+
+    <footer style="text-align: center; padding: 40px; color: #888;">
+      © 2025 581 Victoria Street
     </footer>
-
-    <!-- jQuery FIRST -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Then your main script -->
-    <script src="assets/js/main.js"></script>
-
-    <script>
-      (async function () {
-        const agents = await loadJSON("data/agents.json");
-        const $grid = $("#agentGrid");
-        agents.forEach((a) =>
-          $grid.append(`
-    <article class="card">
-      <img src="${a.photo}" alt="${a.name}" loading="lazy"/>
-      <div class="card-content">
-        <h3 class="card-title"><a href="agent-detail.html?id=${a.id}">${a.name}</a></h3>
-        <div class="meta">${a.title}</div>
-        <p><a class="btn" href="agent-detail.html?id=${a.id}">View Profile</a></p>
-      </div>
-    </article>`)
-        );
-      })();
-    </script>
   </body>
 </html>
+
