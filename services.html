@@ -1,74 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services · RealtyStarter</title>
-  <link rel="stylesheet" href="assets/css/common.css" />
-  <link rel="stylesheet" href="assets/css/services.css" />
-  
-  
-</head>
-<body>
-<a href="#content" class="skip-link">Skip to content</a>
-<header class="site-header">
-  <div class="container navbar">
-    <a class="logo" href="index.html" aria-label="Realty Starter Home">Realty<span>Starter</span></a>
-    <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="index.html" class="">Home</a>
-<a href="listings.html" class="">Listings</a>
-<a href="agents.html" class="">Agents</a>
-<a href="neighborhoods.html" class="">Neighborhoods</a>
-<a href="blog.html" class="">Blog</a>
-<a href="about.html" class="">About</a>
-<a href="contact.html" class="">Contact</a>
-    </nav>
-    <div class="controls">
-      <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
-      <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-<main id="content" class="container">
-  
-<section class="hero">
-  <p class="badge">Services</p>
-  <h1>Buying · Selling · Property Management</h1>
-</section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documents · 581 Victoria Street</title>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <style>
+      /* Centering and Reset for iPhone */
+      body, html { margin: 0; padding: 0; overflow-x: hidden; }
 
-<section class="section">
-  <div class="grid cols-3">
-    <div class="card card-content">
-      <h3 class="card-title">Buy a Home</h3>
-      <p>Browse listings, schedule tours, and get expert guidance.</p>
-    </div>
-    <div class="card card-content">
-      <h3 class="card-title">Sell a Home</h3>
-      <p>Listing strategy, professional photos, and negotiation support.</p>
-    </div>
-    <div class="card card-content">
-      <h3 class="card-title">Manage a Property</h3>
-      <p>Tenant screening, maintenance, and rent collection.</p>
-    </div>
-  </div>
-</section>
+      .doc-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
 
-</main>
-<footer>
-  <div class="container footer-inner">
-    <div>© 2025 RealtyStarter — A student-friendly real estate template.</div>
-    <div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="faq.html">FAQ</a></div>
-  </div>
-</footer>
+      /* Document Button Style */
+      .doc-item {
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+      }
 
-<!-- jQuery FIRST -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
-<!-- Then your main script -->
-<script src="assets/js/main.js"></script>
+      .doc-icon { font-size: 2rem; margin-right: 20px; }
+      .doc-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
+      .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
 
-</body>
+      .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
+
+      /* Mobile Menu "Safety" CSS */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          background: #fff;
+          z-index: 1000;
+          padding: 20px 0;
+          border-bottom: 1px solid #ddd;
+        }
+        .nav-links.is-active {
+          display: flex !important;
+        }
+        .nav-links a { padding: 15px; text-align: center; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="agents.html">Floor Plan and Rooms</a>
+          <a href="services.html" class="active">Documents</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="controls">
+          <button id="themeToggle" class="btn ghost" onclick="toggleTheme()">🌓</button>
+          <button id="hamburger" class="hamburger" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero-text">
+        <h1>Tenant Documents</h1>
+        <p>Tap a file below to view or download the PDF.</p>
+      </section>
+
+      <div class="doc-container">
+        <!-- PDF 1 -->
+        <a href="Documents/lease.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">📄</div>
+          <div class="doc-info">
+            <h3>Lease Agreement</h3>
+            <p>Residential Tenancy Agreement</p>
+          </div>
+        </a>
+
+        <!-- PDF 2 -->
+        <a href="Documents/quickrules.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">📝</div>
+          <div class="doc-info">
+            <h3>House Expectations</h3>
+            <p>Rules & Guidelines</p>
+          </div>
+        </a>
+
+        <!-- PDF 3 -->
+        <a href="Documents/attachmenta.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">📎</div>
+          <div class="doc-info">
+            <h3>Attachment A</h3>
+            <p>Additional Lease Terms</p>
+          </div>
+        </a>
+
+        <!-- PDF 4 -->
+        <a href="Documents/collectioncalendar.pdf" class="doc-item" target="_blank">
+          <div class="doc-icon">📅</div>
+          <div class="doc-info">
+            <h3>Collection Calendar</h3>
+            <p>Garbage & Recycling Schedule</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #888;">
+      © 2026 581 Victoria Street
+    </footer>
+
+    <!-- JavaScript Engine for Hamburger Menu -->
+    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#hamburger').on('click', function(e) {
+          e.preventDefault();
+          $('#navLinks').toggleClass('is-active');
+          const expanded = $(this).attr('aria-expanded') === 'true';
+          $(this).attr('aria-expanded', !expanded);
+        });
+      });
+    </script>
+  </body>
 </html>
