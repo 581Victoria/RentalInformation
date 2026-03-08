@@ -38,30 +38,24 @@
 
       <section class="section">
         <!-- FORM ENGINE: Connected to ouldssalena@gmail.com -->
-        <form class="card card-content" action="https://formsubmit.co" method="POST">
-         
-          <!-- This sends them back to your homepage after they click send -->
-          <input type="hidden" name="_next" value="https://ouldssalena.github.io">
-         
-          <!-- This removes the "I am not a robot" check for a faster experience -->
-          <input type="hidden" name="_captcha" value="false">
+       <form class="card card-content" action="https://formsubmit.co" method="POST">
+  <div class="form-row">
+    <div>
+      <label for="name">Name</label>
+      <input class="input" id="name" name="name" type="text" required />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input class="input" id="email" name="email" type="email" required />
+    </div>
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" class="input" required></textarea>
+  </div>
+  <p><button type="submit" class="btn">Send Message</button></p>
+</form>
 
-          <div class="form-row">
-            <div>
-              <label for="name">Name</label>
-              <input class="input" id="name" name="name" type="text" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input class="input" id="email" name="email" type="email" required />
-            </div>
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" class="input" required></textarea>
-          </div>
-          <p><button type="submit" class="btn">Send Message</button></p>
-        </form>
       </section>
     </main>
 
