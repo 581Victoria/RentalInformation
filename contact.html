@@ -3,97 +3,76 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title> · 581 Victoria Street</title>
+    <title>Contact · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
-    
-    
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
     <header class="site-header">
       <div class="container navbar">
-       <a class="logo" href="index.html" aria-label="581 Victoria Street - Home"
-          >581 <span>Victoria Street</span></a
-        >
+       <a class="logo" href="index.html" aria-label="581 Victoria Street - Home">581 <span>Victoria Street</span></a>
         <nav class="nav-links" id="navLinks" aria-label="Primary">
-          <a href="index.html" class="">Home</a>
-          <a href="listings.html" class="">Listings</a>
-          <a href="agents.html" class="">Agents</a>
-          <a href="neighborhoods.html" class="">Neighborhoods</a>
-          <a href="blog.html" class="">Blog</a>
-          <a href="about.html" class="">About</a>
+          <a href="index.html">Home</a>
+          <a href="listings.html">Listings</a>
+          <a href="agents.html">Agents</a>
+          <a href="neighborhoods.html">Neighborhoods</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
           <a href="contact.html" class="active">Contact</a>
         </nav>
         <div class="controls">
-          <button
-            id="themeToggle"
-            class="btn ghost"
-            onclick="toggleTheme()"
-            aria-pressed="false"
-            aria-label="Toggle dark mode"
-          >
-            🌓
-          </button>
-          <button
-            id="hamburger"
-            class="hamburger"
-            aria-label="Menu"
-            aria-controls="navLinks"
-            aria-expanded="false"
-          >
+          <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
+          <button id="hamburger" class="hamburger" aria-label="Menu">
             <span></span><span></span><span></span>
           </button>
         </div>
       </div>
     </header>
+
     <main id="content" class="container">
       <section class="hero">
-        <p class="badge"></p>
-        <h1>Need to Reach out to us - Send us a quick email!</h1>
+        <h1>Need to Reach out to us?</h1>
+        <p>Send us a quick email using the form below.</p>
       </section>
 
       <section class="section">
-        <form
-          class="card card-content"
-          onsubmit="event.preventDefault(); alert('This is a static template. Plug in your form handler.');"
-        >
+        <!-- REPLACE THE EMAIL BELOW WITH YOUR OWN -->
+        <form class="card card-content" action="https://formsubmit.co" method="POST">
+         
+          <!-- Redirects user back home after they click send -->
+          <input type="hidden" name="_next" value="https://your-github-username.github.io">
+         
+          <!-- Optional: Disables the "Are you a robot" check for a smoother experience -->
+          <input type="hidden" name="_captcha" value="false">
+
           <div class="form-row">
             <div>
               <label for="name">Name</label>
-              <input class="input" id="name" required />
+              <input class="input" id="name" name="name" type="text" required />
             </div>
             <div>
               <label for="email">Email</label>
-              <input class="input" id="email" type="email" required />
+              <input class="input" id="email" name="email" type="email" required />
             </div>
           </div>
           <div>
             <label for="message">Message</label>
-            <textarea id="message" rows="5" class="input" required></textarea>
+            <textarea id="message" name="message" rows="5" class="input" required></textarea>
           </div>
-          <p><button class="btn">Send</button></p>
+          <p><button type="submit" class="btn">Send Message</button></p>
         </form>
       </section>
     </main>
+
     <footer>
       <div class="container footer-inner">
-        <div>
-          <!--© 2025 RealtyStarter — A student-friendly real estate template. -->
-        </div>
-        <div>
-         <!-- <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> -->
-         <!-- <a href="faq.html">FAQ</a> -->
-        </div>
+        <div>© 2025 581 Victoria Street</div>
       </div>
     </footer>
 
-    <!-- jQuery FIRST -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
-<!-- Then your main script -->
-<script src="assets/js/main.js"></script>
-
+    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
+
