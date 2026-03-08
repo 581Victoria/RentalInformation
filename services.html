@@ -6,21 +6,32 @@
     <title>Documents · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <style>
+      /* Same Centering Reset as Gallery */
       body, html { margin: 0; padding: 0; overflow-x: hidden; }
 
-      /* Force Header to the front */
-      .site-header { position: relative; z-index: 10000; }
-
       .doc-container {
-        display: flex; flex-direction: column; align-items: center; 
-        gap: 20px; padding: 20px; width: 100%; box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .doc-item {
-        width: 100%; max-width: 600px; background: #fff; border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-decoration: none;
-        color: inherit; display: flex; align-items: center; padding: 20px;
-        border: 1px solid #eee; box-sizing: border-box;
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #eee;
+        box-sizing: border-box;
       }
 
       .doc-icon { font-size: 2rem; margin-right: 20px; }
@@ -28,25 +39,29 @@
       .doc-info p { margin: 5px 0 0; font-size: 0.9rem; color: #666; }
       .hero-text { text-align: center; padding: 40px 20px; width: 100%; box-sizing: border-box; }
 
-      /* MOBILE MENU REPAIR */
+      /* THIS PART MAKES THE HAMBURGER WORK */
       @media (max-width: 768px) {
-        .nav-links {
-          display: none; flex-direction: column; width: 100%;
-          position: absolute; top: 100%; left: 0; background: #fff;
-          z-index: 9999 !important; padding: 20px 0; border-bottom: 2px solid #ddd;
+        #navLinks {
+          display: none; /* Hidden until clicked */
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          z-index: 9999;
+          border-bottom: 1px solid #ddd;
         }
-
-        /* This forces the menu to appear when the button is clicked */
-        .nav-links.is-active {
+        /* When button is clicked, this class is added by JS */
+        #navLinks.is-active {
           display: flex !important;
         }
-
-        .nav-links a { padding: 15px; text-align: center; width: 100%; text-decoration: none; color: #333; border-bottom: 1px solid #eee; }
+        #navLinks a { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
       }
     </style>
   </head>
   <body>
-   <header class="site-header">
+    <header class="site-header">
       <div class="container navbar">
         <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
         <nav class="nav-links" id="navLinks">
@@ -57,8 +72,8 @@
           <a href="contact.html">Contact</a>
         </nav>
         <div class="controls">
-          <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
-          <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" style="position: relative; z-index: 10001;">
+          <button id="themeToggle" class="btn ghost" onclick="toggleTheme()">🌓</button>
+          <button id="hamburger" class="hamburger" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -68,7 +83,7 @@
     <main class="container">
       <section class="hero-text">
         <h1>Tenant Documents</h1>
-        <p>Tap a file below to view or download the PDF.</p>
+        <p>Tap a file below to view or download.</p>
       </section>
 
       <div class="doc-container">
@@ -95,12 +110,12 @@
       © 2026 581 Victoria Street
     </footer>
 
-    <script src="https://code.jquery.com"></script>
+    <!-- THE ENGINE (Corrected Links) -->
+    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
     <script src="assets/js/main.js"></script>
     <script>
       $(document).ready(function() {
-        $('#hamburger').on('click', function(e) {
-          e.preventDefault();
+        $('#hamburger').on('click', function() {
           $('#navLinks').toggleClass('is-active');
           const expanded = $(this).attr('aria-expanded') === 'true';
           $(this).attr('aria-expanded', !expanded);
