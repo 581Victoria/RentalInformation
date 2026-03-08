@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home · RealtyStarter</title>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="logo" href="index.html" aria-label="Realty Starter Home"
+          >Realty<span>Starter</span></a
+        >
+        <nav class="nav-links" id="navLinks" aria-label="Primary">
+          <a href="index.html" class="active">Home</a>
+          <a href="listings.html" class="">Listings</a>
+          <a href="agents.html" class="">Agents</a>
+          <a href="neighborhoods.html" class="">Neighborhoods</a>
+          <a href="services.html" class="">Services</a>
+          <a href="blog.html" class="">Blog</a>
+          <a href="about.html" class="">About</a>
+          <a href="contact.html" class="">Contact</a>
+        </nav>
+        <div class="controls">
+          <button
+            id="themeToggle"
+            class="btn ghost"
+            onclick="toggleTheme()"
+            aria-pressed="false"
+            aria-label="Toggle dark mode"
+          >
+            🌓
+          </button>
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Menu"
+            aria-controls="navLinks"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" class="container">
+      <!-- hero slider for the homepage -->
+      <section class="hero hero-with-slider">
+        <div
+          class="hero-slider"
+          id="heroSlider"
+          role="region"
+          aria-label="Featured properties slideshow"
+        >
+          <div class="slides">
+            <figure class="slide is-active">
+              <img
+                src="https://picsum.photos/seed/hero1/1400/700"
+                alt="Modern family home exterior at dusk"
+                loading="eager"
+              />
+              <figcaption>Modern Family Home • 3bd · 2ba</figcaption>
+            </figure>
+            <figure class="slide">
+              <img
+                src="https://picsum.photos/seed/hero2/1400/700"
+                alt="Bright condo living room with city view"
+                loading="lazy"
+              />
+              <figcaption>Downtown Condo • City Views</figcaption>
+            </figure>
+            <figure class="slide">
+              <img
+                src="https://picsum.photos/seed/hero3/1400/700"
+                alt="Townhome with landscaped yard"
+                loading="lazy"
+              />
+              <figcaption>Cozy Townhome • Quiet Street</figcaption>
+            </figure>
+          </div>
+          <button class="nav prev" aria-label="Previous slide">‹</button>
+          <button class="nav next" aria-label="Next slide">›</button>
+          <div class="dots" aria-label="Slide navigation"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="badge">Starter Template</p>
+          <h1>Find homes you’ll love in beautiful neighborhoods</h1>
+          <p>
+            Fully static multi‑page site with JSON‑powered listings, dark mode,
+            and a responsive menu. Edit each page and CSS file independently.
+          </p>
+          <p>
+            <a class="btn" href="listings.html">Browse Listings</a>
+            <a class="btn ghost" href="about.html">About Us</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Featured Listings</h2>
+        <div id="featuredGrid" class="grid cols-3"></div>
+      </section>
+
+      <section class="section">
+        <h2>From the Blog</h2>
+        <div id="homeBlog" class="grid cols-3"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          © 2025 RealtyStarter — A student-friendly real estate template.
+        </div>
+        <div>
+          <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> ·
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery FIRST -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Then your shared script -->
+    <script src="assets/js/main.js"></script>
+    <!-- Page script: slider + homepage data -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
