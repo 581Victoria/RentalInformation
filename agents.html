@@ -6,92 +6,77 @@
     <title>Gallery · 581 Victoria Street</title>
     <link rel="stylesheet" href="assets/css/common.css" />
     <style>
-  /* Resetting default browser margins that cause "right-leaning" images */
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevents side-scrolling on iPhone */
-  }
+      /* Resetting default browser margins for iPhone centering */
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
 
-  /* Centering the main container */
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This is the "magic" line for centering */
-    gap: 30px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
+      /* Centering the main container */
+      .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
 
-  /* Centering each image card */
-  .gallery-item {
-    width: 100%;
-    max-width: 600px; /* Adjust this if you want images wider/narrower */
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 0 auto; /* Forces equal space on left and right */
-  }
+      /* Centering each image card */
+      .gallery-item {
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        margin: 0 auto;
+      }
 
-  /* Making sure the image stays inside the centered box */
-  .gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
+      /* Image filling the centered box */
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
 
-  .gallery-item figcaption {
-    padding: 15px;
-    font-weight: bold;
-    background: #f9f9f9;
-    text-align: center;
-    color: #333;
-    border-top: 1px solid #eee;
-  }
+      .gallery-item figcaption {
+        padding: 15px;
+        font-weight: bold;
+        background: #f9f9f9;
+        text-align: center;
+        color: #333;
+        border-top: 1px solid #eee;
+      }
 
-  .hero-text {
-    text-align: center;
-    padding: 40px 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-</style>
+      .hero-text {
+        text-align: center;
+        padding: 40px 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="container navbar">
         <a class="logo" href="index.html">581 <span>Victoria Street</span></a>
         <nav class="nav-links" id="navLinks" aria-label="Primary">
-          <a href="index.html" class="active">Home</a>
-          <a href="agents.html" class="">Floor Plan and Rooms</a>
-          <a href="services.html" class="">Documents</a>
-          <a href="about.html" class="">About</a>
-          <a href="contact.html" class="">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="agents.html" class="active">Floor Plan and Rooms</a>
+          <a href="services.html">Documents</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="controls">
-          <button
-            id="themeToggle"
-            class="btn ghost"
-            onclick="toggleTheme()"
-            aria-pressed="false"
-            aria-label="Toggle dark mode"
-          >
-            🌓
-          </button>
-          <button
-            id="hamburger"
-            class="hamburger"
-            aria-label="Menu"
-            aria-controls="navLinks"
-            aria-expanded="false"
-          >
+          <button id="themeToggle" class="btn ghost" onclick="toggleTheme()" aria-label="Toggle dark mode">🌓</button>
+          <button id="hamburger" class="hamburger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
         </div>
-
       </div>
     </header>
 
@@ -103,7 +88,6 @@
 
       <div class="gallery-container">
         <!-- Exterior & Location -->
-
         <figure class="gallery-item"><img src="images2/Location.jpg"><figcaption>Location</figcaption></figure>
         <figure class="gallery-item"><img src="images2/PropertyLines.jpg"><figcaption>Property Lines</figcaption></figure>
         <figure class="gallery-item"><img src="images2/Parking.jpg"><figcaption>Parking</figcaption></figure>
@@ -141,6 +125,18 @@
     <footer style="text-align: center; padding: 40px; color: #888;">
       © 2026 581 Victoria Street
     </footer>
+
+    <!-- JavaScript for the Hamburger Menu -->
+    <script src="[https://code.jquery.com"></script]https://code.jquery.com"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#hamburger').on('click', function() {
+          const expanded = $(this).attr('aria-expanded') === 'true';
+          $(this).attr('aria-expanded', !expanded);
+          $('#navLinks').toggleClass('is-active');
+        });
+      });
+    </script>
   </body>
 </html>
-
